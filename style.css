@@ -431,6 +431,26 @@ body {
 
 /* tokuria機能紹介ここまで */
 
+/* 具体例ここから */
+.example-wrapper-explain {
+    text-align: center;
+    padding: 1%;
+    color: gray;
+}
+
+.example-carousel {
+    text-align: center;
+    width: 80%;
+    margin: auto auto;
+}
+
+.example-item img {
+    width: 15%;
+    margin: auto auto;
+}
+
+/* 具体例ここまで */
+
 /* 件数関連ここから */
 .taiou-top-wrapper {
     display: flex;
@@ -539,11 +559,13 @@ table {
 
 
 /* フェードインここから */
-.fade-in {
+.fade-in,
+.fade-in-load {
     opacity: 0;
 }
 
-.fade-in.inview {
+.fade-in.inview,
+.fade-in-load.inview {
     animation-name: fade-in;
     animation-duration: .5s;
     animation-timing-function: ease-in-out;
@@ -554,6 +576,17 @@ table {
 }
 
 @keyframes fade-in {
+    0% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-load {
     0% {
         transform: translateY(40px);
     }
@@ -742,6 +775,13 @@ table {
     }
 
     /* tokuria機能紹介ここまで */
+
+    /* 具体例ここから */
+    .example-item img {
+        width: 50%;
+    }
+
+    /* 具体例ここまで */
 
     /* 件数関連ここから */
     .taiou-top-wrapper img {

@@ -1,30 +1,21 @@
-// fvスライドショーここから
-window.addEventListener("DOMContentLoaded", () => {
-    // スライドショー画像のリスト
-    const images = [
-        "images/fv-bg1.png",
-        "images/fv-bg2.png",
-        "images/fv-bg3.png",
-    ];
-
-    let currentIndex = 0;
-    const firstViewWrapper = document.querySelector('.first-view-wrapper');
-
-    if (!firstViewWrapper) {
-        console.error("first-view-wrapperが見つかりません");
-        return;
-    }
-
-    function changeBackgroundImage() {
-        firstViewWrapper.style.backgroundImage = `url("${images[currentIndex]}")`;
-        currentIndex = (currentIndex + 1) % images.length;
-    }
-
-    changeBackgroundImage();
-    setInterval(changeBackgroundImage, 5000);
+// フェードイン(ロード)ここから
+$(window).on('load', function () {
+    $('.fade-in-load').each(function () {
+        $(this).addClass('inview');
+    });
 });
+// フェードイン(ロード)ここまで
 
-// fvスライドショーここまで
+// カルーセルここから
+$(document).ready(function () {
+    $('.example-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        infinite: true,
+    });
+});
+// カルーセルここまで
 
 // 店舗カウントアップここから
 $(function () {
