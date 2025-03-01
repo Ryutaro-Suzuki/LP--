@@ -155,7 +155,7 @@ body {
 .fv-wrapper {
     width: 100%;
     height: 70%;
-    background-image: url(images/fv_bg.webp);
+    background-image: url(img/fv_bg.webp);
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -432,6 +432,10 @@ body {
 /* tokuria機能紹介ここまで */
 
 /* 具体例ここから */
+.example-wrapper {
+    padding: 3% 0;
+}
+
 .example-wrapper-explain {
     text-align: center;
     padding: 1%;
@@ -530,7 +534,7 @@ table {
 
 /* CTAここから */
 .cta-wrapper {
-    background-image: url("images/cta-bg.png");
+    background-image: url("img/cta-bg.webp");
     background-size: cover;
     background-position: center;
 }
