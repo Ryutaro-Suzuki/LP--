@@ -14,6 +14,12 @@ body {
     font-style: normal;
 }
 
+.fugaz-one {
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .h2-wrapper {
     text-align: center;
     margin: auto;
@@ -146,42 +152,135 @@ body {
 
 
 /* ファーストビューここから */
-.first-view-wrapper {
-    background-image: url("images/first-view-bg.jpg");
-    height: 50vh;
+.fv-wrapper {
+    width: 100%;
+    height: 70%;
+    background-image: url(images/fv_bg.webp);
     background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+    background-position: center center;
     display: flex;
-    align-items: center;
-    /* 縦中央 */
-    justify-content: flex-start;
-    /* 横左 */
-    padding-left: 2%;
-    /* 左に余白 */
-    border-bottom: 1px solid black;
-    margin-bottom: 3%;
-}
-
-.first-view {
     flex-direction: column;
-    /* 縦方向配置 */
-    /* 左寄せ */
-    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.first-view p {
+.fv-top {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 3%;
+}
+
+.fv-top-left {
+    width: 50%;
+    padding-top: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fv-top-left p {
+    text-align: left;
     text-align: center;
-}
-
-.first-view span {
-    display: inline-block;
-    font-size: 20px;
     font-weight: bold;
 }
 
-.first-view img {
-    width: 35%;
+.balloon-001 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 300px;
+    margin-bottom: 15px;
+    padding: .8em 1.2em;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.balloon-001::before {
+    position: absolute;
+    bottom: -15px;
+    width: 30px;
+    height: 15px;
+    background-color: var(--main-color);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+}
+
+.fv-top-title {
+    font-size: 32px;
+    line-height: 60px;
+}
+
+.fv-top-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 10px #7e7e7e);
+}
+
+.fv-app-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.fv-attention {
+    width: 90%;
+    margin: auto;
+    padding-top: 2%;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.pc-fv-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2%;
+}
+
+.sp-fv-bottom {
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fv-bottom-msg {
+    text-align: center;
+}
+
+.fv-bottom-msg-sub {
+    font-weight: lighter;
+}
+
+.fv-bottom-msg-main {
+    font-size: 40px;
+}
+
+.fv-margin {
+    margin-right: 3%;
+}
+
+.app-icon-img {
+    width: 10%;
+    height: 10%;
+
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.dl-btn-kari {
+    background-color: var(--main-color);
+    padding: 2%;
 }
 
 /* ファーストビューここまで */
@@ -507,16 +606,68 @@ table {
 
     /* 共通ここまで */
 
-    /* ファーストビューここから */
-    .first-view-wrapper {
-        height: 30vh;
+    /* fvここから */
+    .fv-top {
+        flex-direction: column;
+
     }
 
-    .first-view span {
-        font-size: 16px;
+    .fv-top-left {
+        display: block;
     }
 
-    /* ファーストビューここまで */
+    .fv-top-left,
+    .fv-top-right {
+        width: 100%;
+    }
+
+    .balloon-001 {
+        font-size: 14px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .fv-top-title {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    .fv-attention {
+        font-size: 0.5rem;
+    }
+
+    .pc-fv-bottom {
+        display: none;
+    }
+
+    .sp-fv-bottom {
+        display: block;
+        padding: 3%;
+    }
+
+    .sp-fv-bottom-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sp-fv-bottom-top img {
+        width: 15%;
+    }
+
+    .sp-fv-bottom-bottom {
+        margin: auto;
+    }
+
+    .fv-bottom-msg-sub {
+        font-size: 14px;
+    }
+
+    .fv-bottom-msg-main {
+        font-size: 32px;
+    }
+
+    /* fvここまで */
 
     /* お悩みここから */
     .nayami {
